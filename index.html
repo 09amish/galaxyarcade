@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="silkscreen-regular">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="content">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#games">Games</a></li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <h1 id="home" class="silkscreen-bold">Welcome to Galaxy Arcade</h1>
+            </div>
+        </header>
+        <main>
+            <section id="home" class="home-section">
+                <h1 class="silkscreen-bold">Embark on an Epic Arcade Adventure!</h1>
+                <div class="intro-content">
+                    <p>Explore a universe of fun and excitement with our collection of classic arcade games. Navigate
+                        through the stars and relive the golden age of gaming right here in Galaxy Arcade. Whether
+                        you're in the mood for Snake, Pac-Man, Space Invaders, Tetris, or Pong, we've got it all! Get
+                        ready to embark on an interstellar journey filled with nostalgia and thrills.</p>
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGczajE5MGNvbWlvbW1ua2Z1bXkxeTRtdzhxaXdnY3V6cm9iNWN2cyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26FeUOYQ4cf3y9Q40/giphy.gif"
+                        alt="Arcade Animation" class="arcade-gif">
+                </div>
+            </section>
+            <section id="games" class="games">
+                <div class="game">
+                    <div class="game-frame">
+                        <img src="https://art.pixilart.com/76cecf6b86ae119.gif" alt="Game 1">
+                    </div>
+                    <h2>Snake-Game</h2>
+                    <a href="snake.html" class="play-now">Play Now</a>
+                </div>
+                <div class="game">
+                    <div class="game-frame">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnNubjFvdXcwZ3ljZDBpd2Vka2dyNmxicjJ4OW5hbmlzNWlrMDJrdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/d9QiBcfzg64Io/giphy.gif"
+                            alt="Game 2">
+                    </div>
+                    <h2>Pac-Man</h2>
+                    <a href="https://link-to-game2" class="play-now">Play Now</a>
+                </div>
+                <div class="game">
+                    <div class="game-frame">
+                        <img src="https://media.tenor.com/jiMLk7PRi5AAAAAM/space-invaders.gif" alt="Game 3">
+                    </div>
+                    <h2>Space Invaders</h2>
+                    <a href="https://link-to-game3" class="play-now">Play Now</a>
+                </div>
+                <div class="game">
+                    <div class="game-frame">
+                        <img src=https://media.giphy.com/media/duosIkgZ52QCw7XMoE/giphy.gif?cid=790b7611bqy86xszovi3vyhaw9lwk2v1pculw9dcyih5phc4&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                            alt="Game 4">
+                    </div>
+                    <h2>Tetris</h2>
+                    <a href="https://link-to-game4" class="play-now">Play Now</a>
+                </div>
+                <div class="game">
+                    <div class="game-frame">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm83cnNuYWwwdThtd3d2aTVwM3RydmFrbjMxc2tlZng2bHhqN3gyZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/aTGwuEFyg6d8c/giphy.gif"
+                            alt="Game 5">
+                    </div>
+                    <h2>Pong</h2>
+                    <a href="https://link-to-game5" class="play-now">Play Now</a>
+                </div>
+                <!-- Add more game boxes here -->
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Galaxy Arcade</p>
+        </footer>
+    </div>
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const homeHeading = document.querySelector('.home-section h1');
+            homeHeading.classList.add('animate-text');
+        });
+
+    </script>
+</body>
+
+</html>
